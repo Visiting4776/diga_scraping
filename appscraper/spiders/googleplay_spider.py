@@ -18,6 +18,9 @@ class GPlaySpider(scrapy.Spider):
         'https://play.google.com/store/apps/details?id=com.newsenselab.android.m_sense_migraine',
         'https://play.google.com/store/apps/details?id=de.mynoise.kalmeda',
         'https://play.google.com/store/apps/details?id=de.rehappy.app.rehappy',
+        'https://play.google.com/store/apps/details?id=de.mementor.somnio',
+        'https://play.google.com/store/apps/details?id=de.aidhere.zanadio',
+        'https://play.google.com/store/apps/details?id=com.vivira.android'
     ]
 
     # '&hl=gsw' darf nicht Teil der URL sein!!1!.
