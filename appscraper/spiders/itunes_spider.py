@@ -16,6 +16,9 @@ class ITunesSpider(scrapy.Spider):
         'https://apps.apple.com/de/app/id1511739470',
         'https://apps.apple.com/de/app/kalmeda-mynoise/id1437379931',
         'https://apps.apple.com/de/app/rehappy/id1357107437',
+        'https://apps.apple.com/de/app/vivira-r%C3%BCcken-knie-und-h%C3%BCfte/id1093858117',
+        'https://apps.apple.com/de/app/somnio/id1523016446',
+        'https://apps.apple.com/app/id1499824614'
     ]
 
     def parse(self, response):
