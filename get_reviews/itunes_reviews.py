@@ -16,7 +16,7 @@ app_ids = [
     1482760714,
     1511739470,
     1437379931,
-    #1357107437,
+    1357107437,
     1093858117,
     1523016446,
     1499824614,
@@ -37,6 +37,10 @@ for app_id in app_ids:
         
         response_data = json.loads(response.text)
         
+        if 'data' not in response_data:
+            print(f"No reviews for {app_id}, skipping...")
+            break
+
         reviews.extend([
             dict(app_id=app_id, **r['attributes'])
             for r in response_data['data']
