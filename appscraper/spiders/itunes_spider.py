@@ -10,6 +10,9 @@ class ITunesSpider(scrapy.Spider):
     name = "itunes"
     DEFAULT_NA = 'N/A'
 
+    OUT_FILE = 'results.csv'
+    OUT_FILE_REVIEWS = 'reviews.csv'
+
     appstore_name = 'Apple App Store'
     start_urls = [
         'https://apps.apple.com/de/app/invirto/id1482760714',
@@ -74,7 +77,7 @@ class ITunesSpider(scrapy.Spider):
             for i in range(5):
                 details[f'n_ratings_{5-i}'] = self.DEFAULT_NA
             details['average_rating_calculated'] = self.DEFAULT_NA
-            self.add_details_to_csv(details, "results.csv")
+            self.add_details_to_csv(details, OUT_FILE)
             cprint("Done!", 'green')
             return
 
@@ -93,7 +96,7 @@ class ITunesSpider(scrapy.Spider):
 
         details['average_rating_calculated'] = round(rating_sum / float(n_ratings_total), 1)
         
-        self.add_details_to_csv(details, "results.csv")
+        self.add_details_to_csv(details, OUT_FILE)
         cprint("Done!", 'green')
 
     def parse_reviews(self, response):
