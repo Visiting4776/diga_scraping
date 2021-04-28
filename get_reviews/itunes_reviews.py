@@ -1,7 +1,4 @@
-# TODO
-# alles in eine Datei schreiben, dabei Duplikate überspringen
-# „"" etc filtern
-# Apps ohne Rezensionen ohne Fehler überspringen
+# TODO: alles in eine Datei schreiben, dabei Duplikate überspringen
 
 import requests
 import json

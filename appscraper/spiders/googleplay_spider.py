@@ -1,4 +1,9 @@
+'''
+DEPRECATED IN FAVOUR OF scrape_appstores.py!
+'''
+
 import scrapy
+import pandas as pd
 import csv
 import os
 import unicodedata
@@ -10,7 +15,7 @@ from termcolor import cprint
 class GPlaySpider(scrapy.Spider):
     name = "googleplay"
     DEFAULT_NA = 'N/A'
-    OUT_FILE = 'results.csv'
+    OUT_FILE = 'results2.csv'
 
     appstore_name = 'Google Play Store'
     start_urls = [
@@ -117,7 +122,9 @@ class GPlaySpider(scrapy.Spider):
             with open(filename, 'w') as f:
                 f.write(header_row)
 
-        # add the new row to the CSV file:
-        with open(filename, 'a') as csv_file:
-            csv_file.write(', '.join([str(val) for val in details.values()]) + '\n')
-            # each value must be converted to string first (some are numbers)
+        # # add the new row to the CSV file:
+        # with open(filename, 'a') as csv_file:
+        #     csv_file.write(', '.join([str(val) for val in details.values()]) + '\n')
+        #     # each value must be converted to string first (some are numbers)
+
+    print("ALL DONE")

@@ -1,3 +1,7 @@
+'''
+DEPRECATED IN FAVOUR OF scrape_appstores.py!
+'''
+
 import scrapy
 import csv
 import os
@@ -10,7 +14,7 @@ class ITunesSpider(scrapy.Spider):
     name = "itunes"
     DEFAULT_NA = 'N/A'
 
-    OUT_FILE = 'results.csv'
+    OUT_FILE = 'results2.csv'
     OUT_FILE_REVIEWS = 'reviews.csv'
 
     appstore_name = 'Apple App Store'
