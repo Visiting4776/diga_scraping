@@ -1,33 +1,28 @@
 import pandas as pd
 import requests
-import re
-import os
+import re, sys, os
 import unicodedata
 from bs4 import BeautifulSoup
 from datetime import datetime
 
 NA = 'NA'
 
-urls = {
-    'google_play': [
-        'https://play.google.com/store/apps/details?id=com.sympatient.invirto',
-        'https://play.google.com/store/apps/details?id=com.newsenselab.android.m_sense_migraine',
-        'https://play.google.com/store/apps/details?id=de.mynoise.kalmeda',
-        'https://play.google.com/store/apps/details?id=de.rehappy.app.rehappy',
-        'https://play.google.com/store/apps/details?id=de.mementor.somnio',
-        'https://play.google.com/store/apps/details?id=de.aidhere.zanadio',
-        'https://play.google.com/store/apps/details?id=com.vivira.android'
-    ],
-    'itunes': [
-        'https://apps.apple.com/de/app/invirto/id1482760714',
-        'https://apps.apple.com/de/app/id1511739470',
-        'https://apps.apple.com/de/app/kalmeda-mynoise/id1437379931',
-        'https://apps.apple.com/de/app/rehappy/id1357107437',
-        'https://apps.apple.com/de/app/vivira-r%C3%BCcken-knie-und-h%C3%BCfte/id1093858117',
-        'https://apps.apple.com/de/app/somnio/id1523016446',
-        'https://apps.apple.com/de/app/zanadio/id1499824614'
-    ]
-}
+urls = [
+    'https://play.google.com/store/apps/details?id=com.sympatient.invirto',
+    'https://play.google.com/store/apps/details?id=com.newsenselab.android.m_sense_migraine',
+    'https://play.google.com/store/apps/details?id=de.mynoise.kalmeda',
+    'https://play.google.com/store/apps/details?id=de.rehappy.app.rehappy',
+    'https://play.google.com/store/apps/details?id=de.mementor.somnio',
+    'https://play.google.com/store/apps/details?id=de.aidhere.zanadio',
+    'https://play.google.com/store/apps/details?id=com.vivira.android',
+    'https://apps.apple.com/de/app/invirto/id1482760714',
+    'https://apps.apple.com/de/app/id1511739470',
+    'https://apps.apple.com/de/app/kalmeda-mynoise/id1437379931',
+    'https://apps.apple.com/de/app/rehappy/id1357107437',
+    'https://apps.apple.com/de/app/vivira-r%C3%BCcken-knie-und-h%C3%BCfte/id1093858117',
+    'https://apps.apple.com/de/app/somnio/id1523016446',
+    'https://apps.apple.com/de/app/zanadio/id1499824614'
+]
 
 def extract_from_soup(soup, url):
     app_data = {
@@ -84,17 +79,36 @@ def extract_from_soup(soup, url):
 
     return app_data
 
-rows = []
-for url in [url for store in urls for url in urls[store]]:
-    r = requests.get(url)
-    soup = BeautifulSoup(r.text, 'html.parser')
+if __name__ == '__main__':
+    if len(sys.argv) > 1:
+        print(f"Reading URLs from {sys.argv[1]}... ", end='', flush=True)
+        try:
+            with open(sys.argv[1]) as f:
+                urls = [line.rstrip('\n') for line in f]
+                print(f"Read {len(urls)} lines.")
+        except FileNotFoundError:
+            print("Error loading file!")
+            exit(1)
 
-    rows.append(extract_from_soup(soup, url))
+    else:
+        print("No URL file provided, using default URLs.")
 
-out_path = 'appstore_data.csv'
-df = pd.DataFrame(rows)
-df.to_csv(out_path, 
-    index = False,
-    mode = 'a',
-    #header = not os.path.exists(out_path)) # add header only if file didn't exist before
-)
+    rows = []
+    for url in urls:
+        print(url)
+        try:
+            r = requests.get(url)
+            soup = BeautifulSoup(r.text, 'html.parser')
+        except Exception as e:
+            print(e)
+            continue        
+
+        rows.append(extract_from_soup(soup, url))
+
+    out_path = 'appstore_data.csv'
+    df = pd.DataFrame(rows)
+    df.to_csv(out_path, 
+        index = False,
+        mode = 'a',
+        #header = not os.path.exists(out_path)) # add header only if file didn't exist before
+    )
