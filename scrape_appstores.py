@@ -84,7 +84,7 @@ if __name__ == '__main__':
         print(f"Reading URLs from {sys.argv[1]}... ", end='', flush=True)
         try:
             with open(sys.argv[1]) as f:
-                urls = [line.rstrip('\n') for line in f]
+                urls = [line.rstrip('\n') for line in f if not line.startswith('#')]
                 print(f"Read {len(urls)} lines.")
         except FileNotFoundError:
             print("Error loading file!")
