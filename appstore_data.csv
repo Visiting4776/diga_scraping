@@ -1,31 +1,5 @@
 app_fullname,app_name,app_id,platform,scraping_timestamp,app_size,version,last_updated,downloads_bin,n_ratings,average_rating
-Invirto - Die Therapie gegen Angst,Invirto,com.sympatient.invirto,google_play,2021-04-28 17:00:37,54M,1.12.0,"April 21, 2021","1,000+",9,4.1
-M-sense Migräne,M-sense,com.newsenselab.android.m_sense_migraine,google_play,2021-04-28 17:00:37,36M,1.10,"April 17, 2021","1,000+",52,4.5
-Kalmeda Tinnitus-App,Kalmeda,de.mynoise.kalmeda,google_play,2021-04-28 17:00:37,95M,1.6.4,"April 10, 2021","10,000+",132,2.6
-Rehappy,Rehappy,de.rehappy.app.rehappy,google_play,2021-04-28 17:00:38,45M,3.2.3,"April 21, 2021",100+,NA,NA
-somnio,somnio,de.mementor.somnio,google_play,2021-04-28 17:00:38,1.2M,1.0.2,"April 15, 2021","1,000+",51,3.7
-zanadio,zanadio,de.aidhere.zanadio,google_play,2021-04-28 17:00:39,45M,1.1.4,"April 27, 2021","10,000+",99,3.9
-"Vivira: Back, Knee, and Hip",Vivira,com.vivira.android,google_play,2021-04-28 17:00:39,45M,2.27.2,"April 13, 2021","10,000+",153,4.5
-Invirto - Therapie gegen Angst,Invirto,1482760714,itunes,2021-04-28 17:00:39,98.9 MB,1.12.0,22.04.2021,NA,23,3.6
-M-sense Migräne,M-sense,1511739470,itunes,2021-04-28 17:00:47,67.1 MB,1.10.0,19.04.2021,NA,50,4.6
-Kalmeda Tinnitus-App,Kalmeda,1437379931,itunes,2021-04-28 17:00:49,423.9 MB,1.6.4,11.04.2021,NA,38,3.2
-Rehappy,Rehappy,1357107437,itunes,2021-04-28 17:00:51,155.7 MB,3.2.3,21.04.2021,NA,3,5.0
-"Vivira: Rücken, Knie und Hüfte",Vivira,1093858117,itunes,2021-04-28 17:00:52,149.3 MB,2.33,07.04.2021,NA,266,4.6
-somnio,somnio,1523016446,itunes,2021-04-28 17:00:54,8.1 MB,1.1.6,16.03.2021,NA,48,4.2
-zanadio,zanadio,1499824614,itunes,2021-04-28 17:00:56,54.7 MB,1.1.3,02.04.2021,NA,83,4.0
-
-app_fullname,app_name,app_id,platform,scraping_timestamp,app_size,version,last_updated,downloads_bin,n_ratings,average_rating
-zanadio,zanadio,de.aidhere.zanadio,google_play,2021-05-01 02:08:12,45M,1.1.4,"April 27, 2021","10,000+",105,4.0
-"Vivira: Back, Knee, and Hip",Vivira,com.vivira.android,google_play,2021-05-01 02:08:12,45M,2.27.2,"April 13, 2021","10,000+",154,4.5
-Invirto - Therapie gegen Angst,Invirto,1482760714,itunes,2021-05-01 02:08:12,98.9 MB,1.12.0,22.04.2021,NA,24,3.7
-M-sense Migräne,M-sense,1511739470,itunes,2021-05-01 02:08:13,67.1 MB,1.10.0,19.04.2021,NA,50,4.6
-app_fullname,app_name,app_id,platform,scraping_timestamp,app_size,version,last_updated,downloads_bin,n_ratings,average_rating
-zanadio,zanadio,de.aidhere.zanadio,google_play,2021-05-01 02:19:38,45M,1.1.4,"April 27, 2021","10,000+",105,4.0
-"Vivira: Back, Knee, and Hip",Vivira,com.vivira.android,google_play,2021-05-01 02:19:39,45M,2.27.2,"April 13, 2021","10,000+",154,4.5
-Invirto - Therapie gegen Angst,Invirto,1482760714,itunes,2021-05-01 02:19:41,98.9 MB,1.12.0,22.04.2021,NA,24,3.7
-M-sense Migräne,M-sense,1511739470,itunes,2021-05-01 02:19:43,67.1 MB,1.10.0,19.04.2021,NA,50,4.6
-
-
-app_fullname,app_name,app_id,platform,scraping_timestamp,app_size,version,last_updated,downloads_bin,n_ratings,average_rating
-zanadio,zanadio,de.aidhere.zanadio,google_play,2021-05-01 02:27:30,45M,1.1.4,"April 27, 2021","10,000+",105,4.0
-M-sense Migräne,M-sense,1511739470,itunes,2021-05-01 02:27:32,67.1 MB,1.10.0,19.04.2021,NA,50,4.6
+zanadio,zanadio,de.aidhere.zanadio,google_play,2021-05-04 19:11:59,45M,1.1.4,"April 27, 2021","10,000+",106,4.1
+M-sense Migräne,M-sense,1511739470,itunes,2021-05-04 19:12:00,67.8 MB,1.11,02.05.2021,NA,50,4.6
+zanadio,zanadio,de.aidhere.zanadio,google_play,2021-05-04 19:12:05,45M,1.1.4,"April 27, 2021","10,000+",106,4.1
+M-sense Migräne,M-sense,1511739470,itunes,2021-05-04 19:12:06,67.8 MB,1.11,02.05.2021,NA,50,4.6

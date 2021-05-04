@@ -85,7 +85,7 @@ if __name__ == '__main__':
         try:
             with open(sys.argv[1]) as f:
                 urls = [line.rstrip('\n') for line in f if not line.startswith('#')]
-                print(f"Read {len(urls)} lines.")
+                print(f"Read {len(urls)} URLs.")
         except FileNotFoundError:
             print("Error loading file!")
             exit(1)
@@ -110,5 +110,5 @@ if __name__ == '__main__':
     df.to_csv(out_path, 
         index = False,
         mode = 'a',
-        #header = not os.path.exists(out_path)) # add header only if file didn't exist before
+        header = not os.path.exists(out_path) # add header only if file didn't exist before
     )
